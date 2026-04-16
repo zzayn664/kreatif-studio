@@ -56,6 +56,8 @@ body {
 }
 
 /* Hero Section */
+/* style.css */
+
 .hero {
     height: 100vh;
     display: flex;
@@ -63,8 +65,35 @@ body {
     align-items: center;
     text-align: center;
     padding: 0 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?camera,studio') center/cover;
+    /* GANTI INI: Pakai gambar kamu di folder images */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('images/hero-bg.jpg') center/cover; /* <-- Ganti nama filenya */
     margin-top: 60px;
+}
+
+/* style.css */
+
+.portfolio-item {
+    background-color: #2a2a2a;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden; /* Agar gambar tidak keluar dari kotak */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Sedikit membesar saat di-hover */
+}
+
+/* Tambahkan ini agar gambar mengisi penuh kotak */
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar akan terpotong rapi menyesuaikan kotak */
 }
 
 .hero-content h1 {
